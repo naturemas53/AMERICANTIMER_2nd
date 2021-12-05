@@ -1113,7 +1113,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playPauseButtonLabel: {fileID: 1548993808}
+  duelTimerButtonLabel: {fileID: 490160375}
   timer: {fileID: 1991952709}
+  duelTimer: {fileID: 1991952711}
 --- !u!1 &873049657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,7 +1221,7 @@ MonoBehaviour:
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
+  m_enableKerning: 0
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -1713,6 +1715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1614193129}
+  - component: {fileID: 1614193130}
   m_Layer: 0
   m_Name: DuelTimeArea
   m_TagString: Untagged
@@ -1742,6 +1745,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -122.5}
   m_SizeDelta: {x: 0, y: -245}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1614193130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614193128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef15efb0a6fc040429b24d5c47f23811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeText: {fileID: 1253505626}
+  timer: {fileID: 1991952711}
 --- !u!1 &1628332880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,7 +1840,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1628332883}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1991952711}
+        m_MethodName: OnClickDuelTimeControllerButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1628332883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1991,6 +2019,7 @@ GameObject:
   - component: {fileID: 1991952708}
   - component: {fileID: 1991952709}
   - component: {fileID: 1991952710}
+  - component: {fileID: 1991952711}
   m_Layer: 0
   m_Name: SceneObject
   m_TagString: Untagged
@@ -2034,6 +2063,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d5513434b9468a48bbc1ab30268f077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1991952711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991952707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc1d092c3dcd4a40809c85bfa4416b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2037013579

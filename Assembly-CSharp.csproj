@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\ThisProject\Scripts\Common.cs" />
+    <Compile Include="Assets\ThisProject\Scripts\TimerScene\DuelTimer.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\GameTimer.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\TimerArea\DuelTimeView.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\TimerArea\RemainTimeView.cs" />

@@ -7,9 +7,13 @@ public class TimerControllerButtonLabel : MonoBehaviour
 {
     [SerializeField]
     Text playPauseButtonLabel = null;
+    [SerializeField]
+    Text duelTimerButtonLabel = null;
 
     [SerializeField]
     GameTimer timer = null;
+    [SerializeField]
+    DuelTimer duelTimer = null;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,15 @@ public class TimerControllerButtonLabel : MonoBehaviour
             if( timer != null ) labelText = (timer.IsNowCounting) ? "Pause" : "Resume";
 
             playPauseButtonLabel.text = labelText;
+        }
+
+        if (duelTimerButtonLabel != null)
+        {
+            string labelText = "Label2";
+
+            if (duelTimer != null) labelText = (duelTimer.IsCountUp) ? "Duel\nReset" : "Duel\nStart";
+
+            duelTimerButtonLabel.text = labelText;
         }
     }
 }
