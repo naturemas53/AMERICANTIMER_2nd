@@ -53,6 +53,7 @@
     <UnityVersion>2019.4.31f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\ThisProject\Scripts\BootScene\BootSceneScript.cs" />
     <Compile Include="Assets\ThisProject\Scripts\Common.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\DuelTimer.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\GameTimer.cs" />
