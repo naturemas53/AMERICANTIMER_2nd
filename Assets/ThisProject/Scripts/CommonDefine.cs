@@ -2,17 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommonDefine : MonoBehaviour
+public static class CommonDefine 
 {
-    // Start is called before the first frame update
-    void Start()
+    // プレイヤー情報の集まり.
+    // (null返せるようにclassにしておきます)
+    public class PlayerPropety
     {
-        
+        public string name; // プレイヤー名
+        public Color color; // プレイヤーカラー
+
+        public PlayerPropety()
+        {
+            name = "";
+            color = new Color();
+        }
+
+        public PlayerPropety( string name, Color color )
+        {
+            this.name  = name;
+            this.color = color;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
