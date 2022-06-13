@@ -2,24 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using static CommonDefine;
-
 public class PlayerList : SingletonMonoBehaviour<PlayerList>
 {
-    List<PlayerPropety> playerPropeties;
+    List<PlayerData> playerPropeties;
 
-    public List<PlayerPropety> PlayerPropeties
+    public List<PlayerData> PlayerPropeties
     { 
         get
         {
             // なんかあったらいやなので、コピーで渡します.
-            return new List<PlayerPropety>( this.playerPropeties );
+            return new List<PlayerData>( this.playerPropeties );
         } 
     }
 
     protected override void Initialize()
     {
-        playerPropeties = new List<PlayerPropety>();
+        playerPropeties = new List<PlayerData>();
         playerPropeties.Clear();
     }
 
@@ -29,8 +27,12 @@ public class PlayerList : SingletonMonoBehaviour<PlayerList>
     /// <returns>正常に生成できるとtrue それ以外はfalseが返ります.</returns>
     public bool AddPlayer( string playerName )
     {
-        Color color = new Color(Random.value, Random.value, Random.value, 1.0f);
-        PlayerPropeties.Add( new PlayerPropety( playerName, color ) );
+        PlayerData player = new PlayerData();
+
+        player.playerColor = new Color(Random.value, Random.value, Random.value, 1.0f);
+        player.playerName = playerName;
+
+        PlayerPropeties.Add(player);
 
         return true;
     }
@@ -39,7 +41,7 @@ public class PlayerList : SingletonMonoBehaviour<PlayerList>
     /// プレイヤーを削除します.
     /// </summary>
     /// <param name="playerPropety">削除対象のプレイヤーデータ</param>
-    public void RemovePlayer( PlayerPropety playerPropety )
+    public void RemovePlayer( PlayerData playerPropety )
     {
         if (playerPropeties.Contains(playerPropety))
         {
