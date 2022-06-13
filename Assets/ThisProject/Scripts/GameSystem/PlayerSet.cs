@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerList : SingletonMonoBehaviour<PlayerList>
+public class PlayerSet : SingletonMonoBehaviour<PlayerSet>
 {
     List<PlayerData> playerPropeties;
 
