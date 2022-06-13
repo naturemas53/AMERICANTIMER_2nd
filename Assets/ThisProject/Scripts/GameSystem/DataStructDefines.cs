@@ -32,3 +32,21 @@ public struct MissionData
 
     // ミッションの結果 で結果情報と時間を取得できる何か
 }
+
+/// <summary>
+/// プレイヤーの得点などの情報（どれくらい時間くったかのアレ）.
+/// </summary>
+public struct PlayerScore
+{
+    public float penaltyTime; // ペナルティ時間
+    public int position; // 現在の順位
+}
+
+/// <summary>
+/// プレイヤーデータも欲しい場合はこちら.
+/// </summary>
+public struct PlayerRankData
+{
+    public PlayerData playerData;
+    public PlayerScore playerScore;
+}
