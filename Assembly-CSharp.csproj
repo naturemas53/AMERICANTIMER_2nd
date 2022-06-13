@@ -57,7 +57,7 @@
     <Compile Include="Assets\ThisProject\Scripts\CommonDefine.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\DataStructDefines.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\PlayerList.cs" />
-    <Compile Include="Assets\ThisProject\Scripts\GameSystem\RankingnManager.cs" />
+    <Compile Include="Assets\ThisProject\Scripts\GameSystem\RankingManager.cs" />
     <Compile Include="Assets\ThisProject\Scripts\SingletonMonoBehaviour.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimeHelper.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\DuelTimer.cs" />

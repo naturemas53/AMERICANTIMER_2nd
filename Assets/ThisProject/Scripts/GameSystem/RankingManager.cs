@@ -4,7 +4,7 @@ using UnityEngine;
 
 using static CommonDefine;
 
-public class RankingnManager : SingletonMonoBehaviour<RankingnManager>
+public class RankingManager : SingletonMonoBehaviour<RankingManager>
 {
     /// <summary>
     /// 各順位のデータ.
