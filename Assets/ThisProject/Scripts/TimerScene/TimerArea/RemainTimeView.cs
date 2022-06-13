@@ -21,6 +21,6 @@ public class RemainTimeView: MonoBehaviour
     {
         if (timeText == null || timer == null) return;
 
-        timeText.text = Common.BuildTimeText(timer.RemainTime);
+        timeText.text = TimeHelper.BuildTimeText(timer.RemainTime);
     }
 }
