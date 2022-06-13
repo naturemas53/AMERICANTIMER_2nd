@@ -2,35 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using static CommonDefine;
-
 public class RankingManager : SingletonMonoBehaviour<RankingManager>
 {
-    /// <summary>
-    /// 各順位のデータ.
-    /// </summary>
-    public struct RankData
+    // プレイヤーデータを含めた、ランキング配列
+    // (出来れば常にソートしている状態...　にしておきたい...)
+    List<PlayerRankData> playerRankDatas;
+
+    public List<PlayerRankData> CurrentRanking
     {
-        public string playerName; // プレイヤー名
-        public float penaltyTime; // ペナルティ時間
-        public int position; // 現在の順位
+        get
+        {
+            // 例によってコピー
+            return new List<PlayerRankData>( playerRankDatas );
+        }
     }
 
     protected override void Initialize()
     {
+        playerRankDatas = new List<PlayerRankData>();
+        playerRankDatas.Clear();
         throw new System.NotImplementedException();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     /// <summary>
@@ -38,14 +29,45 @@ public class RankingManager : SingletonMonoBehaviour<RankingManager>
     /// </summary>
     public void InitializeRanking()
     {
-
+        playerRankDatas.Clear();
     }
 
     /// <summary>
     /// ランキングを更新します.
+    /// HACK: もしかしたらちょっと重い処理かも
     /// </summary>
     public void UpdateRanking()
     {
+        InitializeRanking();
 
+        // TODO: なんやかんやあって取得.
+
+        ExcuteSortOfRankData();
+    }
+
+    /// <summary>
+    /// プレイヤーデータを並べ替えます
+    /// （事前に何らかの方法で、playerRankDatasにすでにデータが入っていることが前提です。）
+    /// </summary>
+    void ExcuteSortOfRankData()
+    {
+        playerRankDatas.Sort((a, b) =>
+        {
+            float timeA = a.playerScore.penaltyTime;
+            float timeB = b.playerScore.penaltyTime;
+
+            if (timeA > timeB) return -1;
+            if (timeA < timeB) return 1;
+
+            // ここまで来たら、同じだった ということになる
+            return 0;
+        });
+
+        for (int i = 0; i < playerRankDatas.Count; ++i)
+        {
+            PlayerRankData rankData = playerRankDatas[i];
+            rankData.playerScore.position = (i + 1);
+            playerRankDatas[i] = rankData;
+        }
     }
 }
