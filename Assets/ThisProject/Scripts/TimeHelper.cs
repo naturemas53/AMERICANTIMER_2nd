@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class Common 
+public static class TimeHelper
 {
     /// <summary>
     /// (HH:)MM:SS(.CC)の形式で返します（コンマ付き、時間付き、切り上げを選べます）.
