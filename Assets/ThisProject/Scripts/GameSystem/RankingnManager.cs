@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using static CommonDefine;
+
 public class RankingnManager : SingletonMonoBehaviour<RankingnManager>
 {
     /// <summary>
@@ -12,6 +14,11 @@ public class RankingnManager : SingletonMonoBehaviour<RankingnManager>
         public string playerName; // プレイヤー名
         public float penaltyTime; // ペナルティ時間
         public int position; // 現在の順位
+    }
+
+    protected override void Initialize()
+    {
+        throw new System.NotImplementedException();
     }
 
     // Start is called before the first frame update
