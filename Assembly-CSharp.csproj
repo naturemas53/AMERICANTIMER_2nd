@@ -55,19 +55,19 @@
   <ItemGroup>
     <Compile Include="Assets\ThisProject\Scripts\AppSystem\SceneLoader.cs" />
     <Compile Include="Assets\ThisProject\Scripts\BootScene\BootSceneScript.cs" />
-    <Compile Include="Assets\ThisProject\Scripts\CommonDefine.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\DataStructDefines.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\PlayerSet.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\RankingManager.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\RoundLogSet.cs" />
-    <Compile Include="Assets\ThisProject\Scripts\SingletonMonoBehaviour.cs" />
-    <Compile Include="Assets\ThisProject\Scripts\TimeHelper.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\DuelTimer.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\GameTimer.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\TimerArea\DuelTimeView.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\TimerArea\RemainTimeView.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\TimerControllerButtonLabel.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\TimerSceneState.cs" />
+    <Compile Include="Assets\ThisProject\Scripts\UtilClassies\CommonDefine.cs" />
+    <Compile Include="Assets\ThisProject\Scripts\UtilClassies\SingletonMonoBehaviour.cs" />
+    <Compile Include="Assets\ThisProject\Scripts\UtilClassies\TimeHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
