@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ThisProject/Scenes/BootScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/ThisProject/Scenes/EntryScene.unity
+    guid: 9a24345c9d258e043a7bf96df8c17f6f
+  - enabled: 1
+    path: Assets/ThisProject/Scenes/RoundLogScene.unity
+    guid: 75955f34ae360ab4f8887cf144993c8a
+  - enabled: 1
+    path: Assets/ThisProject/Scenes/RoundResultScene.unity
+    guid: eb6830e088fd6cb43b1b45be6fec13b1
+  - enabled: 1
+    path: Assets/ThisProject/Scenes/RoundSettingScene.unity
+    guid: a31e35fa5a12dc941bee75073417d09e
+  - enabled: 1
+    path: Assets/ThisProject/Scenes/TimerScene.unity
+    guid: 924ae4fb557334645a4b35a2c7d39eb1
+  - enabled: 1
+    path: Assets/ThisProject/Scenes/TotalResultScene.unity
+    guid: 0d4d6a4b450d0534db31195ce3038336
   m_configObjects: {}
