@@ -12,7 +12,7 @@ public struct PlayerData
 // ラウンドの設定値.
 public struct RoundOption
 {
-    public float remainTime; // 設定した試合時間
+    public float gameTime; // 設定した試合時間
     public float multiplayer; // 倍率
 }
 
