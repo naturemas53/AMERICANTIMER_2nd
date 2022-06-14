@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class RoundLogSet : SingletonMonoBehaviour<RoundLogSet>
 {
-    List<RoundData> roundDatas;
+    List<RoundLog> roundDatas;
 
-    public List<RoundData> LogDatas
+    public List<RoundLog> LogDatas
     {
         get
         {
             // なんかあった時ようにコピーで渡します.
-            return new List<RoundData>(roundDatas);
+            return new List<RoundLog>(roundDatas);
         }
     }
 
@@ -22,7 +22,7 @@ public class RoundLogSet : SingletonMonoBehaviour<RoundLogSet>
 
     protected override void Initialize()
     {
-        roundDatas = new List<RoundData>();
+        roundDatas = new List<RoundLog>();
         roundDatas.Clear();
     }
 
@@ -30,7 +30,7 @@ public class RoundLogSet : SingletonMonoBehaviour<RoundLogSet>
     /// 試合結果を追加します.
     /// </summary>
     /// <param name="roundData"> 追加する試合結果 </param>
-    public void AddRoundLog(RoundData roundData)
+    public void AddRoundLog(RoundLog roundData)
     {
         roundDatas.Add( roundData );
     }

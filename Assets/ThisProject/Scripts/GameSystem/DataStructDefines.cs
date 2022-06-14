@@ -9,12 +9,18 @@ public struct PlayerData
     public Color playerColor;
 }
 
-// 各ラウンドの情報.
-public struct RoundData
+// ラウンドの設定値.
+public struct RoundOption
 {
-    public float RemainTime; // 設定した試合時間
-    public float Multiplayer; // 倍率
-    public float DuelTime; // ２人になってから試合した時間
+    public float remainTime; // 設定した試合時間
+    public float multiplayer; // 倍率
+}
+
+// 各ラウンドの結果.
+public struct RoundLog
+{
+    public RoundOption roundOption; // そのラウンドの設定値
+    public float duelTime; // ２人になってから試合した時間
     public List<PlayerData> targetPlayers; // ペナルティを受ける人
     public List<MissionData> appearMissions; // 発生したミッションのデータ
 }
@@ -22,8 +28,8 @@ public struct RoundData
 // ミッション情報.
 public struct MissionData
 { 
-    public float AppearTime; // ミッション発生時の時間.
-    public float ApplyTime; // ミッション発生時間.
+    public float appearTime; // ミッション発生時の時間.
+    public float applyTime; // ミッション発生時間.
     public string overViewText; // ミッションの簡単な概要.
 
     // HACK: もしかしたら、対象者については、
