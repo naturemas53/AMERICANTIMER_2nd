@@ -57,6 +57,7 @@
     <Compile Include="Assets\ThisProject\Scripts\AppSystem\SingletonPrefabScript.cs" />
     <Compile Include="Assets\ThisProject\Scripts\BootScene\BootSceneScript.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\DataStructDefines.cs" />
+    <Compile Include="Assets\ThisProject\Scripts\GameSystem\GameParamaters.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\PlayerSet.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\RankingManager.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\RoundLogSet.cs" />
