@@ -24,8 +24,6 @@ public class RoundLogSet : SingletonMonoBehaviour<RoundLogSet>
     {
         roundDatas = new List<RoundData>();
         roundDatas.Clear();
-
-        throw new System.NotImplementedException();
     }
 
     /// <summary>

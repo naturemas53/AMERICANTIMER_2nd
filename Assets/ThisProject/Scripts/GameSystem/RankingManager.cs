@@ -21,7 +21,6 @@ public class RankingManager : SingletonMonoBehaviour<RankingManager>
     {
         playerRankDatas = new List<PlayerRankData>();
         playerRankDatas.Clear();
-        throw new System.NotImplementedException();
     }
 
     /// <summary>
