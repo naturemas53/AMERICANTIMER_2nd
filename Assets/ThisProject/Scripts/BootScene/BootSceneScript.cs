@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class BootSceneScript : MonoBehaviour
 {
-    [SerializeField]
-    GameObject singletonObject = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        // TODO: 必要に応じてマネージャ等の初期化
-        DontDestroyOnLoad( singletonObject );
+        // そんなにFPSいらない　はず
+        Application.targetFrameRate = 60;
 
-        // TODO: 共通定義とかからシーン名引っ張ってシーンをロード
+        // TODO: フェードも考慮するロードを後に使うように
+        SceneLoader.Instance.LoadScene( SceneLoader.EScene.PlayerEntry );
     }
 
     // Update is called once per frame

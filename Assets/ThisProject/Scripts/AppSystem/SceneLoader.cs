@@ -20,7 +20,7 @@ public class SceneLoader : SingletonMonoBehaviour<SceneLoader>
     static readonly ReadOnlyDictionary<EScene, string> sceneNameMap = new ReadOnlyDictionary<EScene, string>( new Dictionary<EScene, string>() 
     {
         { EScene.Boot, "BootScene" },
-        { EScene.PlayerEntry, "BootScene" },
+        { EScene.PlayerEntry, "EntryScene" },
         { EScene.RoundSetting, "BootScene" },
         { EScene.Timer, "BootScene" },
         { EScene.RoundResult, "BootScene" },
@@ -59,7 +59,7 @@ public class SceneLoader : SingletonMonoBehaviour<SceneLoader>
     }
 
     // シーン読み込み.
-    public void LoadScene( EScene loadScene, UnityAction callBackToLoadedScene )
+    public void LoadScene( EScene loadScene, UnityAction callBackToLoadedScene = null )
     {
         onLoadedScene = callBackToLoadedScene;
 
