@@ -15,6 +15,11 @@ public class PlayerSet : SingletonMonoBehaviour<PlayerSet>
         } 
     }
 
+    public int PlayerCount
+    {
+        get { return playerPropeties.Count; }
+    }
+
     protected override void Initialize()
     {
         playerPropeties = new List<PlayerData>();
