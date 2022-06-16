@@ -80,7 +80,7 @@ public class FadePanel : SingletonMonoBehaviour<FadePanel>
             float t = elapsedTime / time;
             float currentAlpha = Mathf.Lerp( startAlpha, endAlpha, t );
 
-            canvasGroup.alpha = endAlpha;
+            canvasGroup.alpha = currentAlpha;
 
             yield return new WaitForEndOfFrame();
         }
@@ -94,7 +94,7 @@ public class FadePanel : SingletonMonoBehaviour<FadePanel>
     void EndFade()
     {
         canvasGroup.alpha = (currenFadeType == EFade.In) ? 0.0f : 1.0f;
-        canvasGroup.blocksRaycasts = (currenFadeType == EFade.In);
+        canvasGroup.blocksRaycasts = (currenFadeType == EFade.Out);
 
         if (onCompletedFade != null)
         {

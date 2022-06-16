@@ -34,13 +34,15 @@ public class SceneChanger : SingletonMonoBehaviour<SceneChanger>
     /// <param name="onChangedSceneCallBack"></param>
     public void ChangeScene(EScene targetScene, UnityAction onChangedSceneCallBack = null)
     {
-        // TODO: LoadSceneを呼ぶのをフェード後にする.
-        sceneLoader.LoadScene( targetScene, OnLoadedNextScene );
-        
         if( onChangedSceneCallBack != null)
         {
             OnCompletedSceneChange.AddListener(onChangedSceneCallBack);
         }
+
+        FadePanel.Instance.ExcuteFade( FadePanel.EFade.Out, CommonDefine.SCENE_FADE_TIME, () =>
+        {
+            sceneLoader.LoadScene( targetScene, OnLoadedNextScene );
+        });
     }
 
     /// <summary>
@@ -48,6 +50,10 @@ public class SceneChanger : SingletonMonoBehaviour<SceneChanger>
     /// </summary>
     void OnLoadedNextScene()
     {
-
+        FadePanel.Instance.ExcuteFade(FadePanel.EFade.In, CommonDefine.SCENE_FADE_TIME, () =>
+         {
+             OnCompletedSceneChange.Invoke();
+             OnCompletedSceneChange.RemoveAllListeners();
+         });
     }
 }
