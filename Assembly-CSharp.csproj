@@ -53,6 +53,7 @@
     <UnityVersion>2019.4.31f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\ThisProject\Scripts\AppSystem\SceneChanger.cs" />
     <Compile Include="Assets\ThisProject\Scripts\AppSystem\SceneLoader.cs" />
     <Compile Include="Assets\ThisProject\Scripts\AppSystem\SingletonPrefabScript.cs" />
     <Compile Include="Assets\ThisProject\Scripts\BootScene\BootSceneScript.cs" />
