@@ -5,18 +5,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class SceneLoader : SingletonMonoBehaviour<SceneLoader>
+using static SceneChanger;
+public class SceneLoader
 {
-    public enum EScene
-    {
-        Boot,         // 起動
-        PlayerEntry,  // プレイヤー登録
-        RoundSetting, // ラウンド設定
-        Timer,        // タイマー
-        RoundResult,  // ラウンド結果
-        TotalResult,  // 最終結果
-    }
-
     static readonly ReadOnlyDictionary<EScene, string> sceneNameMap = new ReadOnlyDictionary<EScene, string>( new Dictionary<EScene, string>() 
     {
         { EScene.Boot, "BootScene" },
@@ -29,10 +20,13 @@ public class SceneLoader : SingletonMonoBehaviour<SceneLoader>
 
     UnityAction onLoadedScene;
 
-    protected override void Initialize()
+    public SceneLoader()
     {
         onLoadedScene = null;
+    }
 
+    public void Initialize()
+    {
         SceneManager.sceneLoaded += this.OnSceneLoaded;
         SceneManager.activeSceneChanged += this.OnActiveSceneChanged;
     }

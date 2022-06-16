@@ -12,7 +12,7 @@ public class BootSceneScript : MonoBehaviour
         Application.targetFrameRate = 60;
 
         // TODO: フェードも考慮するロードを後に使うように
-        SceneLoader.Instance.LoadScene( SceneLoader.EScene.PlayerEntry );
+        SceneChanger.Instance.ChangeScene( SceneChanger.EScene.PlayerEntry );
     }
 
     // Update is called once per frame
