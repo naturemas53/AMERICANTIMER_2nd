@@ -30,14 +30,22 @@ public class PlayerSet : SingletonMonoBehaviour<PlayerSet>
     /// 新しいプレイヤーを生成します。
     /// </summary>
     /// <returns>正常に生成できるとtrue それ以外はfalseが返ります.</returns>
-    public bool AddPlayer( string playerName )
+    public bool AddPlayer( string playerName, out PlayerData putedData )
     {
         PlayerData player = new PlayerData();
+        putedData = null;
+
+        // 登録時の何らかのチェック関数.
+        if(false)
+        {
+            return false;
+        }
 
         player.playerColor = new Color(Random.value, Random.value, Random.value, 1.0f);
         player.playerName = playerName;
 
         PlayerPropeties.Add(player);
+        putedData = player;
 
         return true;
     }

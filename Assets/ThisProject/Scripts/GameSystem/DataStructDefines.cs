@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // プレイヤーの情報.
-public struct PlayerData
+public class PlayerData
 {
     public string playerName;
     public Color playerColor;
 }
 
 // ラウンドの設定値.
-public struct RoundOption
+public class RoundOption
 {
     public float gameTime; // 設定した試合時間
     public float multiplayer; // 倍率
 }
 
 // 各ラウンドの結果.
-public struct RoundLog
+public class RoundLog
 {
     public RoundOption roundOption; // そのラウンドの設定値
     public float duelTime; // ２人になってから試合した時間
@@ -26,7 +26,7 @@ public struct RoundLog
 }
 
 // ミッション情報.
-public struct MissionData
+public class MissionData
 { 
     public float appearTime; // ミッション発生時の時間.
     public float applyTime; // ミッション発生時間.
@@ -42,7 +42,7 @@ public struct MissionData
 /// <summary>
 /// プレイヤーの得点などの情報（どれくらい時間くったかのアレ）.
 /// </summary>
-public struct PlayerScore
+public class PlayerScore
 {
     public float penaltyTime; // ペナルティ時間
     public int position; // 現在の順位
@@ -51,7 +51,7 @@ public struct PlayerScore
 /// <summary>
 /// プレイヤーデータも欲しい場合はこちら.
 /// </summary>
-public struct PlayerRankData
+public class PlayerRankData
 {
     public PlayerData playerData;
     public PlayerScore playerScore;
