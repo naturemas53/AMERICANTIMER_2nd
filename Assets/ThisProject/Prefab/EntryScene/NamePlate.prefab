@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 6034866190174619741}
   - component: {fileID: 6139851079344543379}
   - component: {fileID: 7819666474792413591}
+  - component: {fileID: 110308603348026394}
   m_Layer: 5
   m_Name: NamePlate
   m_TagString: Untagged
@@ -232,6 +233,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &110308603348026394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825940648702378274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9a4d10444fc464094e577bbcaf9f76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionButton: {fileID: 22888545172589141}
+  inputField: {fileID: 7073380861116643878}
+  inputPanel: {fileID: 3022210493720025860}
+  displayPanel: {fileID: 6984382825725095307}
+  parentScript: {fileID: 0}
 --- !u!1 &927972517106684982
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +262,7 @@ GameObject:
   - component: {fileID: 6590727201218138500}
   - component: {fileID: 6984382825725095307}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NameLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
