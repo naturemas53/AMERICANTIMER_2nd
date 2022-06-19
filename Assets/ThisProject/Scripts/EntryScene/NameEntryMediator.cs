@@ -5,7 +5,7 @@ using UnityEngine;
 public class NameEntryMediator : MonoBehaviour
 {
     [SerializeField]
-    GameObject namePlate;
+    NamePlate namePlate;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +55,7 @@ public class NameEntryMediator : MonoBehaviour
     // 新しいネームプレートの生成.
     void AddNamePlate()
     {
-        Instantiate( namePlate.gameObject, this.transform );
+        NamePlate addedPlate = Instantiate( namePlate.gameObject, this.transform ).GetComponent<NamePlate>();
+        addedPlate.Initialize( this );
     }
 }
