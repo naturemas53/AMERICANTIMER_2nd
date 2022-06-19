@@ -24,11 +24,11 @@ public class NamePlate : MonoBehaviour
     void Start()
     {
         selfData = null;
-        parentScript = null;
+        //parentScript = null;
         inputPanel.gameObject.SetActive(true);
         displayPanel.gameObject.SetActive(false);
 
-        actionButtonLabel = actionButton.GetComponent<Text>();
+        actionButtonLabel = actionButton.GetComponentInChildren<Text>();
         Button button = actionButton.GetComponent<Button>();
         button.onClick.AddListener(OnPressedActionButton);
     }

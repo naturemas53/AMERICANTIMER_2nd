@@ -7,6 +7,8 @@ public class NameEntryMediator : MonoBehaviour
     [SerializeField]
     NamePlate namePlate;
 
+    Vector2 selfSize;
+
     // Start is called before the first frame update
     void Start()
     {
