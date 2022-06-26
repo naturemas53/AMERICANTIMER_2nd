@@ -55,6 +55,8 @@ public abstract class WindowBase : MonoBehaviour
 
         CallbackToDecide.Invoke();
         CallbackToDecide.RemoveAllListeners();
+
+        Destroy( gameObject );
     }
 
     /// <summary>

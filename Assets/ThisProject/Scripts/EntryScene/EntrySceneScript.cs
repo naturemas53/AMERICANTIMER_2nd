@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EntrySceneScript : MonoBehaviour
 {
+    [SerializeField]
+    InputField roundInput;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,19 +36,21 @@ public class EntrySceneScript : MonoBehaviour
     /// </summary>
     bool IsCanGame()
     {
-        if(PlayerSet.Instance.PlayerCount <= 1)
+        if(PlayerSet.Instance.PlayerCount < 2)
         {
-            // TODO: エラーダイアログの表示
+            var window = WindowFactory.Instance.CreateWindow(WindowFactory.CreateType.TextWindow);
+            window.SetText("さすがにプレイヤーが少なすぎます\r\nもうちょっと友達を作りましょう");
             return false;
         }
 
-        // TODO: 数値を取得する処理 できなかったらエラーダイアログ.
-
         int inputedRound = 0;
+        string roundStr = roundInput.text;
+        int.TryParse( roundStr , out inputedRound );
 
-        if( inputedRound <= 0 )
+        if ( inputedRound < 1 )
         {
-            // TODO: エラーダイアログの表示
+            var window = WindowFactory.Instance.CreateWindow(WindowFactory.CreateType.TextWindow);
+            window.SetText("不正なラウンド数 or 数字そのものでない\r\nものが入力されています。");
             return false;
         }
 

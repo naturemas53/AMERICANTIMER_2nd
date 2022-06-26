@@ -44,7 +44,7 @@ public class PlayerSet : SingletonMonoBehaviour<PlayerSet>
         player.playerColor = new Color(Random.value, Random.value, Random.value, 1.0f);
         player.playerName = playerName;
 
-        PlayerPropeties.Add(player);
+        playerPropeties.Add(player);
         putedData = player;
 
         return true;
