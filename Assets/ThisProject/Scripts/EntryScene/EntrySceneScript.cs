@@ -27,7 +27,7 @@ public class EntrySceneScript : MonoBehaviour
     {
         if( IsCanGame() )
         {
-            // TODO: フェードを兼ねたシーン遷移処理.
+            SceneChanger.Instance.ChangeScene( SceneChanger.EScene.RoundSetting );
         }
     }
 

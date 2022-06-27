@@ -12,10 +12,11 @@ public class SceneLoader
     {
         { EScene.Boot, "BootScene" },
         { EScene.PlayerEntry, "EntryScene" },
-        { EScene.RoundSetting, "BootScene" },
-        { EScene.Timer, "BootScene" },
-        { EScene.RoundResult, "BootScene" },
-        { EScene.TotalResult, "BootScene" },
+        { EScene.RoundSetting, "RoundSettingScene" },
+        { EScene.Timer, "TimerScene" },
+        { EScene.RoundResult, "RoundResultScene" },
+        { EScene.TotalResult, "TotalResultScene" },
+        { EScene.RoundLog, "RoundLogScene" },
     } );
 
     UnityAction onLoadedScene;

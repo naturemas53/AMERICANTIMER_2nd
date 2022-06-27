@@ -13,6 +13,7 @@ public class SceneChanger : SingletonMonoBehaviour<SceneChanger>
         Timer,        // タイマー
         RoundResult,  // ラウンド結果
         TotalResult,  // 最終結果
+        RoundLog,     // 各ラウンドのログ
     }
 
     SceneLoader sceneLoader;
