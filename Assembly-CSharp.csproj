@@ -69,6 +69,8 @@
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\PlayerSet.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\RankingManager.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\RoundLogSet.cs" />
+    <Compile Include="Assets\ThisProject\Scripts\RoundSettingScene\TimeChangeCallBack.cs" />
+    <Compile Include="Assets\ThisProject\Scripts\RoundSettingScene\TimeSetting.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\DuelTimer.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\GameTimer.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\TimerArea\DuelTimeView.cs" />
