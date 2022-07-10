@@ -19,7 +19,7 @@ public class TimeChangeCallBack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        onPressedCallBack = new FloatUnityEvent();
+        CreateEventInstance();
 
         Button button = this.GetComponent<Button>();
         button.onClick.AddListener(OnClickedButton);
@@ -32,6 +32,13 @@ public class TimeChangeCallBack : MonoBehaviour
 
     public void RegistCallBack( UnityAction<float> registCallBack )
     {
+        CreateEventInstance();
         onPressedCallBack.AddListener( registCallBack );
+    }
+
+    void CreateEventInstance()
+    {
+        if (onPressedCallBack != null) return;
+        onPressedCallBack = new FloatUnityEvent();
     }
 }

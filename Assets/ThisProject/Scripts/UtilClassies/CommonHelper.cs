@@ -47,4 +47,36 @@ public static class CommonHelper
 
         return timeText;
     }
+
+    // st rd nd th のアレ
+    static public string GetNumberOrdinal(int num)
+    {
+        // 0ってどうするんだ... とりあえず 20th、30thに習う形としてth
+        if( num == 0 )
+        {
+            return "th";
+        }
+
+        // **10 といったような、2桁目が"1"の場合
+        if( (num % 100) / 10 == 1 )
+        {
+            // 218... とかだったら　2hundled righteen になる...はず（？）
+            return "th";
+        }
+
+
+        // ここまで来たら特例のth(?)は無い　はず.
+        // ということで、下一桁を見て判断.
+        switch ( num % 10 )
+        {
+            case 1: return "st";
+            case 2: return "nd";
+            case 3: return "rd";
+
+            default: break;
+        }
+
+        // 上記switchにもかからなかったらやっぱりth
+        return "th";
+    }
 }

@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 778293552189997277, guid: 2f9a67179f5f3b046b7b9a91a8fcec23,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2386771623658884383, guid: 2f9a67179f5f3b046b7b9a91a8fcec23,
         type: 3}
@@ -496,7 +496,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 474562067}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 507365176}
+        m_MethodName: OnPressedStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &474562067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,6 +588,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446e5e6e9b669394c87acb42825ae549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  titleText: {fileID: 1598515831}
+  timeSetting: {fileID: 1098947047}
+  multiplayerInput: {fileID: 1572257260}
 --- !u!1 &556488405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1071,7 @@ PrefabInstance:
     - target: {fileID: 3474572277317753299, guid: 13a7ba300f644b5419391e4277814707,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00002341366
+      value: 0.00007044808
       objectReference: {fileID: 0}
     - target: {fileID: 3474572277320827700, guid: 13a7ba300f644b5419391e4277814707,
         type: 3}
