@@ -69,6 +69,7 @@
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\PlayerSet.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\RankingManager.cs" />
     <Compile Include="Assets\ThisProject\Scripts\GameSystem\RoundLogSet.cs" />
+    <Compile Include="Assets\ThisProject\Scripts\RoundSettingScene\RoundSettingScript.cs" />
     <Compile Include="Assets\ThisProject\Scripts\RoundSettingScene\TimeChangeCallBack.cs" />
     <Compile Include="Assets\ThisProject\Scripts\RoundSettingScene\TimeSetting.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\DuelTimer.cs" />
@@ -78,8 +79,8 @@
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\TimerControllerButtonLabel.cs" />
     <Compile Include="Assets\ThisProject\Scripts\TimerScene\TimerSceneState.cs" />
     <Compile Include="Assets\ThisProject\Scripts\UtilClassies\CommonDefine.cs" />
+    <Compile Include="Assets\ThisProject\Scripts\UtilClassies\CommonHelper.cs" />
     <Compile Include="Assets\ThisProject\Scripts\UtilClassies\SingletonMonoBehaviour.cs" />
-    <Compile Include="Assets\ThisProject\Scripts\UtilClassies\TimeHelper.cs" />
     <Compile Include="Assets\ThisProject\Scripts\WIndow\TextWindow.cs" />
     <Compile Include="Assets\ThisProject\Scripts\WIndow\WindowBase.cs" />
     <Compile Include="Assets\ThisProject\Scripts\WIndow\WindowFactory.cs" />

@@ -39,6 +39,6 @@ public class TimeSetting : MonoBehaviour
 
     void UpdateTimeText()
     {
-        timerText.text = TimeHelper.BuildTimeText( CurrentTime );
+        timerText.text = CommonHelper.BuildTimeText( CurrentTime );
     }
 }

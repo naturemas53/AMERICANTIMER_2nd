@@ -21,6 +21,6 @@ public class DuelTimeView : MonoBehaviour
     {
         if (timeText == null || timer == null) return;
 
-        timeText.text = TimeHelper.BuildTimeText(timer.DuelTime, false, true, true );
+        timeText.text = CommonHelper.BuildTimeText(timer.DuelTime, false, true, true );
     }
 }
