@@ -9,6 +9,8 @@ public class DuelTimer : MonoBehaviour
     public float DuelTime { get; private set; } = 0;
     // 計測中か.
     public bool IsCountUp { get; private set; } = false;
+    // 倍率
+    public float Multiplayer { get; private set; } = 1.0f;
 
     GameTimer timer = null;
     // 試合時間計測開始痔の時間
@@ -28,7 +30,7 @@ public class DuelTimer : MonoBehaviour
 
         float elapsedTime = countStartedRemainTime - timer.RemainTime;
 
-        DuelTime = elapsedTime;
+        DuelTime = elapsedTime * Multiplayer;
     }
 
     /// <summary>
@@ -42,11 +44,20 @@ public class DuelTimer : MonoBehaviour
     }
 
     /// <summary>
+    /// 倍率設定
+    /// </summary>
+    public void SetMultiplayer( float multiplayer )
+    {
+        Multiplayer = multiplayer;
+    }
+
+    /// <summary>
     /// 計測開始
     /// </summary>
     public void StartDuelTime()
     {
         IsCountUp = true;
+        DuelTime = 0;
         countStartedRemainTime = timer.RemainTime;
     }
 
@@ -55,7 +66,6 @@ public class DuelTimer : MonoBehaviour
     /// </summary>
     public void ResetDuelTime()
     {
-        DuelTime = 0;
         IsCountUp = false;
     }
 }
